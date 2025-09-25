@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: react-app
-        image: vasanth31r/minikube-app:latest
+        image: vasanth31r/minikube-app:latest   # ✅ make sure repo name matches Docker Hub
         ports:
         - containerPort: 80
         livenessProbe:
@@ -31,6 +31,8 @@ spec:
             port: 80
           initialDelaySeconds: 5
           periodSeconds: 5
+      imagePullSecrets:
+      - name: docker-hub-secret   # ✅ this tells k8s to use the secret Jenkins created
 ---
 apiVersion: v1
 kind: Service
