@@ -2,6 +2,7 @@
   "name": "react-minikube-app",
   "version": "1.0.0",
   "description": "React app for Minikube deployment",
+  "homepage": ".",
   "main": "./frontend/src/index.js",
   "scripts": {
     "start": "react-scripts start",
